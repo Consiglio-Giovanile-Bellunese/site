@@ -1,5 +1,9 @@
 # Sito del Consiglio Giovanile Bellunese ODV
 
+**🔗 Sito online (indirizzo provvisorio): https://consiglio-giovanile-bellunese.github.io/site/**
+
+Indirizzo definitivo, quando il dominio sarà collegato: https://www.consigliogiovanilebl.org/
+
 Sito statico in HTML, CSS e JavaScript. Non serve installare niente né lanciare una build: i file in questa cartella **sono** il sito.
 
 ## Struttura

@@ -110,6 +110,84 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('close', () => photos[current].focus());
   }
 
+  // --- Finestrella email: al posto di aprire il programma di posta mostra l'indirizzo da copiare ---
+  const mailLinks = document.querySelectorAll('a[href^="mailto:"]');
+  if (mailLinks.length && typeof HTMLDialogElement === 'function') {
+    const sheet = document.createElement('dialog');
+    sheet.className = 'mail-sheet';
+    sheet.setAttribute('aria-labelledby', 'mail-sheet-title');
+    sheet.innerHTML = `<div class="mail-sheet-body">
+      <button class="mail-sheet-close" type="button" aria-label="Chiudi">✕</button>
+      <span class="mail-sheet-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7.5 8 6 8-6"/></svg></span>
+      <h2 id="mail-sheet-title">Scrivici</h2>
+      <p class="mail-sheet-text">Scrivi a questo indirizzo con il tuo programma di posta preferito:</p>
+      <div class="mail-sheet-field">
+        <strong class="mail-sheet-address"></strong>
+        <button class="btn btn-gold mail-sheet-copy" type="button" data-target="address">Copia indirizzo</button>
+      </div>
+      <div class="mail-sheet-subject" hidden>
+        <span class="mail-sheet-label">Oggetto consigliato</span>
+        <div class="mail-sheet-field">
+          <span class="mail-sheet-subject-text"></span>
+          <button class="btn btn-outline mail-sheet-copy" type="button" data-target="subject">Copia oggetto</button>
+        </div>
+      </div>
+      <a class="mail-sheet-app" href="#">Oppure apri l’app di posta <span aria-hidden="true">↗</span></a>
+      <p class="mail-sheet-status" role="status" aria-live="polite"></p>
+    </div>`;
+    document.body.append(sheet);
+
+    const address = sheet.querySelector('.mail-sheet-address');
+    const subjectBox = sheet.querySelector('.mail-sheet-subject');
+    const subjectText = sheet.querySelector('.mail-sheet-subject-text');
+    const status = sheet.querySelector('.mail-sheet-status');
+    const appLink = sheet.querySelector('.mail-sheet-app');
+    let opener = null;
+
+    const close = () => {
+      if (!sheet.open || sheet.classList.contains('is-closing')) return;
+      if (reducedMotion) { sheet.close(); return; }
+      sheet.classList.add('is-closing');
+      const finish = () => { if (sheet.open) { sheet.classList.remove('is-closing'); sheet.close(); } };
+      sheet.addEventListener('animationend', finish, { once: true });
+      setTimeout(finish, 400); // nel caso l'animazione non parta
+    };
+
+    mailLinks.forEach(link => link.addEventListener('click', event => {
+      event.preventDefault();
+      const url = new URL(link.href);
+      const subject = url.searchParams.get('subject') || '';
+      address.textContent = decodeURIComponent(url.pathname);
+      subjectText.textContent = subject;
+      subjectBox.hidden = !subject;
+      appLink.href = link.href;
+      status.textContent = '';
+      sheet.querySelectorAll('.mail-sheet-copy').forEach(b => { b.textContent = b.dataset.target === 'address' ? 'Copia indirizzo' : 'Copia oggetto'; });
+      opener = link;
+      sheet.showModal();
+    }));
+
+    sheet.querySelectorAll('.mail-sheet-copy').forEach(button => button.addEventListener('click', async () => {
+      const source = button.dataset.target === 'address' ? address : subjectText;
+      try {
+        await navigator.clipboard.writeText(source.textContent);
+        const label = button.textContent;
+        button.textContent = 'Copiato ✓';
+        status.textContent = button.dataset.target === 'address' ? 'Indirizzo copiato' : 'Oggetto copiato';
+        setTimeout(() => { button.textContent = label; }, 2000);
+      } catch {
+        window.getSelection().selectAllChildren(source);
+        status.textContent = 'Testo selezionato: usa Copia o Ctrl+C.';
+      }
+    }));
+
+    sheet.querySelector('.mail-sheet-close').addEventListener('click', close);
+    appLink.addEventListener('click', close);
+    sheet.addEventListener('click', event => { if (event.target === sheet) close(); });
+    sheet.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    sheet.addEventListener('close', () => { if (opener) opener.focus(); });
+  }
+
   // --- Anno nel footer ---
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
