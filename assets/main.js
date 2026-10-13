@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); toggle.focus(); }
     });
-    window.matchMedia('(min-width: 1001px)').addEventListener('change', event => { if (event.matches) setOpen(false); });
+    window.matchMedia('(min-width: 1141px)').addEventListener('change', event => { if (event.matches) setOpen(false); });
   }
 
   // --- Carosello progetti (scorrimento nativo + frecce) ---

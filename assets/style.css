@@ -181,7 +181,7 @@ p { margin: 0 0 1em; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 1000px) {
+@media (max-width: 1140px) {
   .nav-toggle { display: inline-flex; }
   .site-nav {
     position: fixed; inset: var(--header-h) 0 0 0; z-index: 49;
@@ -372,15 +372,21 @@ p { margin: 0 0 1em; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--cerulean-deep); color: rgb(255 255 255 / .78); padding: clamp(56px, 7vw, 88px) 0 28px; font-size: .97rem; }
-.footer-grid { display: grid; grid-template-columns: 1.1fr 1fr 1.4fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgb(255 255 255 / .14); }
-.footer-logo { display: block; width: 170px; }
+.footer-grid { display: grid; grid-template-columns: .9fr .9fr 1.3fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgb(255 255 255 / .14); }
+.footer-logo { display: block; width: 160px; }
 .footer-title { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
 .footer-links li + li { margin-top: 8px; }
 .site-footer a { text-decoration: none; transition: color .2s; overflow-wrap: anywhere; }
 .site-footer a:hover { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
-.site-footer address { margin-top: 16px; }
+.footer-address { display: flex; gap: 10px; align-items: flex-start; color: var(--white); line-height: 1.6; }
+.footer-address svg { flex: none; width: 20px; height: 20px; margin-top: 2px; fill: none; stroke: var(--gold); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.footer-map { display: inline-block; margin-top: 12px; font-size: .9rem; font-weight: 600; color: var(--gold); }
+.site-footer .footer-map:hover { color: var(--white); }
 .footer-bottom { margin: 24px 0 0; font-size: .85rem; color: rgb(255 255 255 / .6); }
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-logo { width: 140px; }
 }
@@ -508,7 +514,7 @@ p { margin: 0 0 1em; }
 .about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 80px); align-items: center; }
 .about-intro h2 { margin-bottom: 20px; }
 .about-intro p { font-size: clamp(1.1rem, 1rem + .3vw, 1.25rem); color: var(--muted); margin: 0; }
-.about-photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3; transform: rotate(1deg); }
+.about-photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 3 / 2; transform: rotate(1deg); }
 .about-photo img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 860px) { .about-intro { grid-template-columns: 1fr; } }
 
@@ -601,6 +607,83 @@ p { margin: 0 0 1em; }
 .join-email a { color: var(--cerulean); font-weight: 600; overflow-wrap: anywhere; }
 @media (max-width: 1000px) { .join-options { grid-template-columns: 1fr; gap: 14px; } .join-option .btn { align-self: stretch; } }
 @media (max-width: 760px) { .join-next { grid-template-columns: 1fr; } }
+
+/* ---------- Scheda progetto in evidenza (Carriera 360°) ---------- */
+.project-card-featured {
+  background: linear-gradient(150deg, var(--cerulean), var(--cerulean-deep));
+  border-color: transparent; color: var(--white);
+}
+.project-card-featured h3, .project-card-featured h3 a { color: var(--white); }
+.project-card-featured p:not(.tag) { color: rgb(255 255 255 / .82); }
+.project-card-featured .tag { background: rgb(255 255 255 / .14); color: var(--gold); }
+
+/* ---------- Dicono di noi ---------- */
+.press-outlet { font: 800 .76rem/1.2 var(--font-head); letter-spacing: .12em; text-transform: uppercase; color: var(--cerulean); }
+.press-type {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 8px; border-radius: 999px;
+  font: 700 .72rem/1 var(--font-head); letter-spacing: .04em; color: var(--cerulean-deep);
+  background: color-mix(in srgb, var(--steel) 18%, white);
+}
+.press-type-radio { background: color-mix(in srgb, var(--gold) 32%, white); }
+.press-type svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Citazione grande */
+.press-quote {
+  position: relative; overflow: hidden; margin: 0;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: clamp(30px, 4vw, 48px); border-radius: calc(var(--radius) + 6px); color: var(--white);
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgb(62 117 171 / .5), transparent 60%),
+    linear-gradient(150deg, var(--cerulean), var(--cerulean-deep));
+}
+.press-quote blockquote { margin: 0; }
+.press-quote p { font: 800 clamp(1.9rem, 1.3rem + 2.2vw, 2.9rem)/1.08 var(--font-head); letter-spacing: -.025em; margin: 0 0 20px; max-width: 14ch; }
+.press-quote p::before { content: "“"; display: block; height: .55em; margin-bottom: 8px; font-size: 2.2em; line-height: 1; color: var(--gold); }
+.press-quote figcaption { font-size: .95rem; color: rgb(255 255 255 / .75); }
+.press-quote-wide { margin-bottom: 28px; }
+.press-quote-wide p { max-width: none; }
+
+/* Elenco compatto (home) */
+.press-home { display: grid; grid-template-columns: .85fr 1.15fr; gap: 20px; }
+.press-rows { display: grid; gap: 12px; }
+.press-row {
+  display: grid; grid-template-columns: 1fr auto; gap: 6px 20px; align-items: center;
+  padding: 20px 22px; border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow);
+  text-decoration: none; transition: transform .25s ease, box-shadow .25s ease;
+}
+.press-row:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.press-row-meta { font-size: .85rem; color: var(--muted); }
+.press-row-title { grid-column: 1; font: 700 1.05rem/1.35 var(--font-head); color: var(--ink); }
+.press-row-arrow {
+  grid-column: 2; grid-row: 1 / span 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--sky); color: var(--cerulean); font-weight: 700; transition: background-color .2s, color .2s;
+}
+.press-row:hover .press-row-arrow { background: var(--cerulean); color: var(--white); }
+@media (max-width: 860px) { .press-home { grid-template-columns: 1fr; } }
+
+/* Schede */
+.press-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.press-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.press-card {
+  position: relative; display: flex; flex-direction: column;
+  padding: 26px 26px 22px; border-radius: var(--radius); background: var(--white); border: 1px solid var(--line);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
+}
+.section-tint .press-card { border-color: transparent; box-shadow: var(--shadow); }
+.press-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+.press-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 16px; }
+.press-card h3 { font-size: 1.18rem; line-height: 1.3; letter-spacing: -.01em; margin-bottom: 10px; }
+.press-card h3 a { text-decoration: none; color: var(--cerulean); }
+.press-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; } /* tutta la scheda cliccabile */
+.press-card:has(a:focus-visible) { outline: 3px solid var(--gold); outline-offset: 3px; }
+.press-card a:focus-visible { outline: none; }
+.press-summary { color: var(--muted); font-size: 1rem; margin-bottom: 18px; }
+.press-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin: auto 0 0; padding-top: 14px; font-size: .88rem; color: var(--muted); }
+.press-cta { font-weight: 700; color: var(--steel); }
+.press-list .press-card:first-child { grid-column: 1 / -1; }
+.press-list .press-card:first-child h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.7rem); }
+@media (max-width: 1000px) { .press-grid { grid-template-columns: 1fr 1fr; } .press-grid .press-card:last-child { grid-column: 1 / -1; } }
+@media (max-width: 700px) { .press-grid, .press-list { grid-template-columns: 1fr; gap: 14px; } }
 
 /* ---------- Finestrella email ---------- */
 .mail-sheet {
