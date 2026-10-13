@@ -193,14 +193,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Comparsa degli elementi allo scorrimento ---
   const items = [...document.querySelectorAll('[data-reveal]')];
+  // Finita la comparsa togliamo lo stato "reveal": le sue regole CSS sono più specifiche
+  // di quelle delle schede e bloccherebbero l'effetto hover (alzata + ombra morbida).
+  const settle = el => {
+    el.removeAttribute('data-reveal');
+    el.classList.remove('is-visible');
+    el.style.transitionDelay = '';
+  };
   if (reducedMotion || !('IntersectionObserver' in window)) {
-    items.forEach(el => el.classList.add('is-visible'));
+    items.forEach(settle);
     return;
   }
   const reveal = (el, i) => {
-    el.style.transitionDelay = `${i * 80}ms`;
+    const delay = i * 80;
+    el.style.transitionDelay = `${delay}ms`;
     el.classList.add('is-visible');
-    el.addEventListener('transitionend', () => { el.style.transitionDelay = ''; }, { once: true });
+    const done = event => {
+      if (event.target !== el || event.propertyName !== 'transform') return;
+      el.removeEventListener('transitionend', done);
+      settle(el);
+    };
+    el.addEventListener('transitionend', done);
+    setTimeout(() => { el.removeEventListener('transitionend', done); settle(el); }, delay + 1500); // riserva
   };
   // Ciò che è già sullo schermo compare subito; il resto quando ci si arriva scorrendo.
   const below = [];
