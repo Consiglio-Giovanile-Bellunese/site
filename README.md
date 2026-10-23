@@ -2,8 +2,6 @@
 
 **🔗 Sito online: https://www.consigliogiovanilebl.org/**
 
-(Il vecchio indirizzo provvisorio https://consiglio-giovanile-bellunese.github.io/site/ reindirizza qui.)
-
 Sito statico in HTML, CSS e JavaScript. Non serve installare niente né lanciare una build: i file in questa cartella **sono** il sito.
 
 ## Struttura
