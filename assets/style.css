@@ -796,3 +796,16 @@ p { margin: 0 0 1em; }
 .vb-banner p { align-self: start; margin-bottom: 0; }
 @media (max-width: 560px) { .vb-banner > div:first-child { grid-template-columns: 1fr; } .vb-banner .vb-logo { grid-row: auto; height: 88px; width: 88px; margin-bottom: 14px; } }
 .vb-banner .vb-soon { background: #12233F; color: #fff; border-color: #12233F; cursor: default; }
+
+/* Numeri d'impatto: etichette più leggibili e montagne del sito sullo sfondo */
+.impact { position: relative; overflow: hidden; }
+.impact::after {
+  content: ""; position: absolute; right: -4%; bottom: -1px; width: min(560px, 70%); aspect-ratio: 640 / 150;
+  background: #fff; opacity: .07; pointer-events: none;
+  clip-path: polygon(0 100%, 22% 30%, 38% 62%, 58% 0, 78% 55%, 88% 35%, 100% 70%, 100% 100%); }
+.impact > * { position: relative; z-index: 1; }
+.impact h2 { margin-bottom: 44px; }
+.impact { text-align: center; }
+.stat { padding-top: 0; border-top: 0; }
+.stat span { margin-top: 12px; font-size: 1.15rem; font-weight: 600; color: #fff; }
+.impact-note { margin-top: 36px; color: rgb(255 255 255 / .72); }
