@@ -366,7 +366,7 @@ p { margin: 0 0 1em; }
   clip-path: polygon(0 100%, 22% 30%, 38% 62%, 58% 0, 78% 55%, 88% 35%, 100% 70%, 100% 100%);
 }
 .cta-inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; }
-.cta h2 { margin: 0; color: var(--cerulean-deep); max-width: 18ch; }
+.cta h2 { margin: 0; color: var(--cerulean-deep); }
 .cta .btn-gold { background: var(--cerulean); color: var(--white); box-shadow: 0 12px 28px -12px rgb(7 44 82 / .7); }
 .cta .btn-gold:hover { background: var(--cerulean-deep); }
 
@@ -379,7 +379,7 @@ p { margin: 0 0 1em; }
 .site-footer a { text-decoration: none; transition: color .2s; overflow-wrap: anywhere; }
 .site-footer a:hover { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 .footer-address { display: flex; gap: 10px; align-items: flex-start; color: var(--white); line-height: 1.6; }
-.footer-address svg { flex: none; width: 20px; height: 20px; margin-top: 2px; fill: none; stroke: var(--gold); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.footer-address svg { display: none; }
 .footer-map { display: inline-block; margin-top: 12px; font-size: .9rem; font-weight: 600; color: var(--gold); }
 .site-footer .footer-map:hover { color: var(--white); }
 .footer-bottom { margin: 24px 0 0; font-size: .85rem; color: rgb(255 255 255 / .6); }
