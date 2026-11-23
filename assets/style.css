@@ -757,3 +757,31 @@ p { margin: 0 0 1em; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* ---------- Base Dolomiti: scheda nei colori del progetto (come i post Instagram) ---------- */
+.project-card-base { --accent: #60B030; background: #EC1C74 url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27400%27%20height%3D%27400%27%20viewBox%3D%270%200%20400%20400%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-opacity%3D%27.22%27%20stroke-width%3D%271.6%27%3E%3Cpath%20d%3D%27M-20%2060c60-40%20120%2030%20190%200s120-50%20250%2010%27%2F%3E%3Cpath%20d%3D%27M-20%2095c70-35%20130%2035%20200%205s130-45%20240%2015%27%2F%3E%3Cpath%20d%3D%27M-20%20300c50-30%20110%2020%20170-10s140-40%20270%2020%27%2F%3E%3Cpath%20d%3D%27M-20%20335c60-25%20120%2025%20185-5s135-35%20255%2025%27%2F%3E%3Cpath%20d%3D%27M120%20200c0-40%2040-60%2080-55s70%2040%2060%2075-55%2055-90%2045-50-30-50-65z%27%2F%3E%3Cpath%20d%3D%27M145%20202c2-25%2028-38%2055-34s46%2026%2040%2050-37%2036-60%2030-37-22-35-46z%27%2F%3E%3Cpath%20d%3D%27M170%20204c2-12%2015-18%2028-16s22%2013%2019%2025-18%2017-29%2014-19-11-18-23z%27%2F%3E%3Cpath%20d%3D%27M300%20140c20-30%2070-20%2080%2015s-25%2060-60%2050-40-35-20-65z%27%2F%3E%3Cpath%20d%3D%27M40%20170c25-25%2060-10%2060%2020s-35%2045-55%2030-30-30-5-50z%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / 400px; border-color: transparent; }
+.project-card-base .tag { background: #fff; color: #111; border-radius: 4px; }
+.project-card-base h3 a { color: #111; }
+.project-card-base h3 .hl { background: #fff; padding: 0 .18em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.project-card-base p:not(.tag) { color: #111; }
+.project-card-base .card-arrow { background: #111; color: #fff; }
+
+/* Pagina Base Dolomiti: parte alta nei colori del progetto */
+.page-hero-base { background: #EC1C74 url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27400%27%20height%3D%27400%27%20viewBox%3D%270%200%20400%20400%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-opacity%3D%27.22%27%20stroke-width%3D%271.6%27%3E%3Cpath%20d%3D%27M-20%2060c60-40%20120%2030%20190%200s120-50%20250%2010%27%2F%3E%3Cpath%20d%3D%27M-20%2095c70-35%20130%2035%20200%205s130-45%20240%2015%27%2F%3E%3Cpath%20d%3D%27M-20%20300c50-30%20110%2020%20170-10s140-40%20270%2020%27%2F%3E%3Cpath%20d%3D%27M-20%20335c60-25%20120%2025%20185-5s135-35%20255%2025%27%2F%3E%3Cpath%20d%3D%27M120%20200c0-40%2040-60%2080-55s70%2040%2060%2075-55%2055-90%2045-50-30-50-65z%27%2F%3E%3Cpath%20d%3D%27M145%20202c2-25%2028-38%2055-34s46%2026%2040%2050-37%2036-60%2030-37-22-35-46z%27%2F%3E%3Cpath%20d%3D%27M170%20204c2-12%2015-18%2028-16s22%2013%2019%2025-18%2017-29%2014-19-11-18-23z%27%2F%3E%3Cpath%20d%3D%27M300%20140c20-30%2070-20%2080%2015s-25%2060-60%2050-40-35-20-65z%27%2F%3E%3Cpath%20d%3D%27M40%20170c25-25%2060-10%2060%2020s-35%2045-55%2030-30-30-5-50z%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / 400px; }
+.page-hero-base .hero-path { color: rgb(255 255 255 / .10); }
+.page-hero-base h1 { color: #111; }
+.page-hero-base h1 .hl { background: #fff; padding: 0 .15em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.page-hero-base .page-hero-lead { color: #111; }
+.page-hero-base .ridge-back { fill: #fff; opacity: 1; }
+.page-hero-base .ridge-front { fill: #fff; }
+.page-hero-base .eyebrow-light, .page-hero-base .breadcrumb, .page-hero-base .breadcrumb a { color: #fff; }
+/* Pagina Base Dolomiti: contenuti nello stile dei post */
+.base-theme .eyebrow { color: #EC1C74; }
+.base-theme h2, .base-theme .detail h3 { color: #111; }
+.base-theme .project-intro h2 { max-width: none; }
+.base-theme .hl-pink { background: #EC1C74; color: #fff; padding: 0 .15em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.base-theme .detail::before { background: #EC1C74; color: #fff; }
+.base-theme .media-block { background: #EC1C74 url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27400%27%20height%3D%27400%27%20viewBox%3D%270%200%20400%20400%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-opacity%3D%27.22%27%20stroke-width%3D%271.6%27%3E%3Cpath%20d%3D%27M-20%2060c60-40%20120%2030%20190%200s120-50%20250%2010%27%2F%3E%3Cpath%20d%3D%27M-20%2095c70-35%20130%2035%20200%205s130-45%20240%2015%27%2F%3E%3Cpath%20d%3D%27M-20%20300c50-30%20110%2020%20170-10s140-40%20270%2020%27%2F%3E%3Cpath%20d%3D%27M-20%20335c60-25%20120%2025%20185-5s135-35%20255%2025%27%2F%3E%3Cpath%20d%3D%27M120%20200c0-40%2040-60%2080-55s70%2040%2060%2075-55%2055-90%2045-50-30-50-65z%27%2F%3E%3Cpath%20d%3D%27M145%20202c2-25%2028-38%2055-34s46%2026%2040%2050-37%2036-60%2030-37-22-35-46z%27%2F%3E%3Cpath%20d%3D%27M170%20204c2-12%2015-18%2028-16s22%2013%2019%2025-18%2017-29%2014-19-11-18-23z%27%2F%3E%3Cpath%20d%3D%27M300%20140c20-30%2070-20%2080%2015s-25%2060-60%2050-40-35-20-65z%27%2F%3E%3Cpath%20d%3D%27M40%20170c25-25%2060-10%2060%2020s-35%2045-55%2030-30-30-5-50z%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / 400px; }
+.base-theme .media-block h2, .base-theme .media-block p { color: #111; }
+.base-theme .media-block .hl { background: #fff; padding: 0 .15em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.base-theme .media-block .btn { background: #111; color: #fff; border-color: #111; }
