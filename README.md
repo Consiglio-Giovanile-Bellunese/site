@@ -21,6 +21,7 @@ documenti.html
 unisciti.html
 404.html                  ← pagina "non trovata" (GitHub Pages la usa da sola)
 sitemap.xml, robots.txt   ← per i motori di ricerca
+googleb904c64c9fe138ea.html ← verifica di Google (Search Console e Google Play): NON cancellarlo
 .nojekyll                 ← dice a GitHub Pages di pubblicare i file così come sono
 assets/
   style.css               ← tutti gli stili (colori del brand in cima, in :root)
