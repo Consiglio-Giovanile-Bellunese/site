@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Carriera 360° | Consiglio Giovanile Bellunese ODV</title>
-  <meta name="description" content="Carriera 360° mette in contatto studenti, imprese e realtà formative attraverso colloqui e workshop di orientamento nel Bellunese.">
+  <title>Carriera 360° – Orientamento scuola e lavoro a Belluno</title>
+  <meta name="description" content="Il career day del Consiglio Giovanile Bellunese: studenti delle superiori incontrano aziende, ITS e associazioni tra colloqui e workshop. Tre edizioni dal 2023.">
   <meta name="theme-color" content="#0B4074">
   <link rel="canonical" href="https://www.consigliogiovanilebl.org/carriera-360.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="Consiglio Giovanile Bellunese ODV">
-  <meta property="og:title" content="Carriera 360° | Consiglio Giovanile Bellunese ODV">
-  <meta property="og:description" content="Carriera 360° mette in contatto studenti, imprese e realtà formative attraverso colloqui e workshop di orientamento nel Bellunese.">
+  <meta property="og:title" content="Carriera 360° – Orientamento scuola e lavoro a Belluno">
+  <meta property="og:description" content="Il career day del Consiglio Giovanile Bellunese: studenti delle superiori incontrano aziende, ITS e associazioni tra colloqui e workshop. Tre edizioni dal 2023.">
   <meta property="og:url" content="https://www.consigliogiovanilebl.org/carriera-360.html">
   <meta property="og:image" content="https://www.consigliogiovanilebl.org/assets/img/carriera-2026-c024.webp">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -47,13 +47,96 @@
     .c360-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 16px 0 0; padding: 0; list-style: none; }
     .c360-links a { font: 700 .88rem/1.3 var(--font-head); color: var(--cerulean); text-decoration: underline; text-underline-offset: 3px; }
     .c360-all { margin: 32px 0 0; }
+    .c360-block + .gallery { margin-top: clamp(56px, 8vw, 96px); }
     @media (max-width: 900px) { .c360-audience { grid-template-columns: 1fr; } .c360-steps { grid-template-columns: repeat(2, 1fr); } .c360-edition { grid-template-columns: 1fr; } }
     @media (max-width: 520px) { .c360-steps { grid-template-columns: 1fr; } }
-    .c360-intro { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(28px, 5vw, 64px); align-items: center; margin-bottom: 40px; }
+    .c360-intro { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
     .c360-intro .c360-lead { margin-bottom: 0; }
     .c360-intro-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
     @media (max-width: 900px) { .c360-intro { grid-template-columns: 1fr; } }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Event",
+        "name": "Carriera 360° – prima edizione",
+        "description": "Evento di orientamento in cui oltre 300 studenti delle scuole superiori incontrano aziende, associazioni e professionisti.",
+        "startDate": "2023-10-30",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "ex Chiesa dei Gesuiti",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belluno",
+            "addressRegion": "BL",
+            "addressCountry": "IT"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Consiglio Giovanile Bellunese ODV",
+          "url": "https://www.consigliogiovanilebl.org/"
+        },
+        "image": "https://www.consigliogiovanilebl.org/assets/img/carriera-2026-c024.webp",
+        "url": "https://www.consigliogiovanilebl.org/carriera-360.html"
+      },
+      {
+        "@type": "Event",
+        "name": "Carriera 360° – seconda edizione",
+        "description": "Seconda edizione di Carriera 360°: oltre 600 studenti e 46 stand.",
+        "startDate": "2024-09-21",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Longarone Fiere",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Longarone",
+            "addressRegion": "BL",
+            "addressCountry": "IT"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Consiglio Giovanile Bellunese ODV",
+          "url": "https://www.consigliogiovanilebl.org/"
+        },
+        "image": "https://www.consigliogiovanilebl.org/assets/img/carriera-2026-c024.webp",
+        "url": "https://www.consigliogiovanilebl.org/carriera-360.html"
+      },
+      {
+        "@type": "Event",
+        "name": "Carriera 360° – terza edizione",
+        "description": "Terza edizione di Carriera 360°, con la partecipazione di ITS e associazioni.",
+        "startDate": "2026-05-12",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Longarone Fiere",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Longarone",
+            "addressRegion": "BL",
+            "addressCountry": "IT"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Consiglio Giovanile Bellunese ODV",
+          "url": "https://www.consigliogiovanilebl.org/"
+        },
+        "image": "https://www.consigliogiovanilebl.org/assets/img/carriera-2026-c024.webp",
+        "url": "https://www.consigliogiovanilebl.org/carriera-360.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Vai al contenuto</a>
@@ -111,29 +194,6 @@
           </div>
           <img class="c360-intro-photo" src="assets/img/carriera-2026-a059.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Uno studente parla con un professionista">
         </div>
-        <div class="gallery" aria-label="Fotografie di Carriera 360°" role="group" data-reveal>
-          <a href="assets/img/carriera-2026-c024.webp" data-lightbox><img src="assets/img/carriera-2026-c024.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Studenti e professionisti si incontrano presso uno stand di Carriera 360°"></a>
-          <a href="assets/img/carriera-incontro.webp" data-lightbox><img src="assets/img/carriera-incontro.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Un gruppo di studenti partecipa a un workshop di orientamento"></a>
-          <a href="assets/img/carriera-colloqui.webp" data-lightbox><img src="assets/img/carriera-colloqui.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Due studentesse dialogano con una professionista"></a>
-          <a href="assets/img/carriera-laboratorio.webp" data-lightbox><img src="assets/img/carriera-laboratorio.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Studenti seguono una dimostrazione con una videocamera"></a>
-          <a href="assets/img/carriera-2026-a017.webp" data-lightbox><img src="assets/img/carriera-2026-a017.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Studenti seguono un incontro di orientamento"></a>
-          <a href="assets/img/carriera-2026-a004.webp" data-lightbox><img src="assets/img/carriera-2026-a004.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Una studentessa si confronta con una professionista"></a>
-          <a href="assets/img/carriera-orientamento.webp" data-lightbox><img src="assets/img/carriera-orientamento.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Una studentessa dialoga con i referenti di un’associazione"></a>
-          <a href="assets/img/carriera-2026-c008.webp" data-lightbox><img src="assets/img/carriera-2026-c008.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti seguono un workshop di Carriera 360°"></a>
-          <a href="assets/img/carriera-2026-a033.webp" data-lightbox><img src="assets/img/carriera-2026-a033.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Un gruppo di studenti partecipa a un workshop"></a>
-          <a href="assets/img/carriera-2026-a030.webp" data-lightbox><img src="assets/img/carriera-2026-a030.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti conversano negli spazi dell’evento"></a>
-          <a href="assets/img/carriera-2026-a059.webp" data-lightbox><img src="assets/img/carriera-2026-a059.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Uno studente parla con un professionista"></a>
-          <a href="assets/img/carriera-2026-a079.webp" data-lightbox><img src="assets/img/carriera-2026-a079.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti conversano presso uno stand"></a>
-          <a href="assets/img/carriera-2026-c085.webp" data-lightbox><img src="assets/img/carriera-2026-c085.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Un gruppo di partecipanti posa per una foto"></a>
-          <a href="assets/img/carriera-2026-c100.webp" data-lightbox><img src="assets/img/carriera-2026-c100.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti presso uno stand di Carriera 360°"></a>
-          <a href="assets/img/carriera-2026-c102.webp" data-lightbox><img src="assets/img/carriera-2026-c102.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Una studentessa incontra i referenti di un’azienda"></a>
-        </div>
-        <dialog class="lightbox" aria-label="Fotografie di Carriera 360°">
-          <button class="lightbox-close" type="button" aria-label="Chiudi">✕</button>
-          <button class="lightbox-prev" type="button" aria-label="Foto precedente">←</button>
-          <figure><img alt=""><figcaption></figcaption></figure>
-          <button class="lightbox-next" type="button" aria-label="Foto successiva">→</button>
-        </dialog>
 
         <div class="c360-block" data-reveal>
           <p class="eyebrow">Per chi è</p>
@@ -165,6 +225,30 @@
           </ol>
         </div>
 
+        <div class="gallery" aria-label="Fotografie di Carriera 360°" role="group" data-reveal>
+          <a href="assets/img/carriera-2026-c024.webp" data-lightbox><img src="assets/img/carriera-2026-c024.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Studenti e professionisti si incontrano presso uno stand di Carriera 360°"></a>
+          <a href="assets/img/carriera-incontro.webp" data-lightbox><img src="assets/img/carriera-incontro.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Un gruppo di studenti partecipa a un workshop di orientamento"></a>
+          <a href="assets/img/carriera-colloqui.webp" data-lightbox><img src="assets/img/carriera-colloqui.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Due studentesse dialogano con una professionista"></a>
+          <a href="assets/img/carriera-laboratorio.webp" data-lightbox><img src="assets/img/carriera-laboratorio.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Studenti seguono una dimostrazione con una videocamera"></a>
+          <a href="assets/img/carriera-2026-a017.webp" data-lightbox><img src="assets/img/carriera-2026-a017.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Studenti seguono un incontro di orientamento"></a>
+          <a href="assets/img/carriera-2026-a004.webp" data-lightbox><img src="assets/img/carriera-2026-a004.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Una studentessa si confronta con una professionista"></a>
+          <a href="assets/img/carriera-orientamento.webp" data-lightbox><img src="assets/img/carriera-orientamento.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Una studentessa dialoga con i referenti di un’associazione"></a>
+          <a href="assets/img/carriera-2026-c008.webp" data-lightbox><img src="assets/img/carriera-2026-c008.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti seguono un workshop di Carriera 360°"></a>
+          <a href="assets/img/carriera-2026-a033.webp" data-lightbox><img src="assets/img/carriera-2026-a033.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Un gruppo di studenti partecipa a un workshop"></a>
+          <a href="assets/img/carriera-2026-a030.webp" data-lightbox><img src="assets/img/carriera-2026-a030.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti conversano negli spazi dell’evento"></a>
+          <a href="assets/img/carriera-2026-a059.webp" data-lightbox><img src="assets/img/carriera-2026-a059.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Uno studente parla con un professionista"></a>
+          <a href="assets/img/carriera-2026-a079.webp" data-lightbox><img src="assets/img/carriera-2026-a079.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti conversano presso uno stand"></a>
+          <a href="assets/img/carriera-2026-c085.webp" data-lightbox><img src="assets/img/carriera-2026-c085.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Un gruppo di partecipanti posa per una foto"></a>
+          <a href="assets/img/carriera-2026-c100.webp" data-lightbox><img src="assets/img/carriera-2026-c100.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti presso uno stand di Carriera 360°"></a>
+          <a href="assets/img/carriera-2026-c102.webp" data-lightbox><img src="assets/img/carriera-2026-c102.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Una studentessa incontra i referenti di un’azienda"></a>
+        </div>
+        <dialog class="lightbox" aria-label="Fotografie di Carriera 360°">
+          <button class="lightbox-close" type="button" aria-label="Chiudi">✕</button>
+          <button class="lightbox-prev" type="button" aria-label="Foto precedente">←</button>
+          <figure><img alt=""><figcaption></figcaption></figure>
+          <button class="lightbox-next" type="button" aria-label="Foto successiva">→</button>
+        </dialog>
+
         <div class="c360-block editions" data-reveal>
           <p class="eyebrow">Le edizioni</p>
           <h2>Un progetto che cresce edizione dopo edizione</h2>
@@ -176,7 +260,6 @@
                 <p class="c360-meta">30 ottobre 2023 · ex Chiesa dei Gesuiti, Belluno</p>
                 <span class="c360-fact">Oltre 300 studenti</span>
                 <p>Il primo appuntamento porta gli studenti delle scuole superiori del capoluogo a incontrare aziende, associazioni e professionisti.</p>
-                <ul class="c360-links"><li><a href="https://www.telebelluno.it/wp/lavoro-associazionismo-e-prove-di-colloquio-giovani-a-scuola-nellex-chiesa-dei-gesuiti/" target="_blank" rel="noopener noreferrer">Telebelluno ↗</a></li><li><a href="https://www.bellunopress.it/2023/10/31/il-consiglio-giovanile-bellunese-incontra-lamministrazione-comunale-aziende-e-associazioni/" target="_blank" rel="noopener noreferrer">Bellunopress ↗</a></li><li><a href="https://www.newsinquota.it/scuola-e-lavoro-il-consiglio-giovanile-avvicina-i-due-mondi/" target="_blank" rel="noopener noreferrer">News In Quota ↗</a></li></ul>
               </div>
             </li>
             <li class="c360-edition">
@@ -186,7 +269,6 @@
                 <p class="c360-meta">21 settembre 2024 · Longarone Fiere</p>
                 <span class="c360-fact">Oltre 600 studenti</span><span class="c360-fact">46 stand</span>
                 <p>L’evento si sposta in una sede con spazi adeguati alle sue dimensioni e il numero di partecipanti più che raddoppia.</p>
-                <ul class="c360-links"><li><a href="https://www.telebelluno.it/wp/carriera-360-seconda-edizione-da-record-presenti-46-stand-e-oltre-600-studenti-2/" target="_blank" rel="noopener noreferrer">Telebelluno ↗</a></li><li><a href="https://www.radiopiu.net/wordpress/centinaia-di-studenti-a-longarone-fiere-per-carriera-360/" target="_blank" rel="noopener noreferrer">Radio Più ↗</a></li></ul>
               </div>
             </li>
             <li class="c360-edition">
@@ -196,7 +278,6 @@
                 <p class="c360-meta">12 maggio 2026 · Longarone Fiere</p>
                 <span class="c360-fact">Con ITS e associazioni</span>
                 <p>Entrano in gioco anche gli ITS e le associazioni: un confronto sempre più completo, che si avvicina ai 360° del nome.</p>
-                <ul class="c360-links"><li><a href="https://appiacna.com/news/carriera-360-da-studente-a-professionista-unopportunita-per-le-aziende/" target="_blank" rel="noopener noreferrer">APPIA CNA ↗</a></li><li><a href="https://www.radiopiu.net/wordpress/carriera-360-torna-a-longarone/" target="_blank" rel="noopener noreferrer">Radio Più ↗</a></li><li><a href="https://www.ildolomiti.it/economia/2026/non-siamo-sfaticati-non-vogliamo-farci-prendere-in-giro-dal-lavoro-alla-casa-lincertezza-nel-futuro-dei-giovani-siamo-sommersi-da-notizie-negative" target="_blank" rel="noopener noreferrer">Il Dolomiti ↗</a></li></ul>
               </div>
             </li>
           </ol>
