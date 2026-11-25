@@ -597,7 +597,7 @@ p { margin: 0 0 1em; }
 .join-option p { color: var(--muted); margin-bottom: 26px; }
 .join-option .btn { margin-top: auto; white-space: normal; text-align: center; }
 .join-next {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px 48px; align-items: start;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px 48px; align-items: center;
   margin-top: 40px; padding: clamp(28px, 4vw, 44px); border-radius: var(--radius);
   background: var(--sky);
 }
