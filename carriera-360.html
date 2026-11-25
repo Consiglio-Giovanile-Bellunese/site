@@ -49,6 +49,10 @@
     .c360-all { margin: 32px 0 0; }
     @media (max-width: 900px) { .c360-audience { grid-template-columns: 1fr; } .c360-steps { grid-template-columns: repeat(2, 1fr); } .c360-edition { grid-template-columns: 1fr; } }
     @media (max-width: 520px) { .c360-steps { grid-template-columns: 1fr; } }
+    .c360-intro { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(28px, 5vw, 64px); align-items: center; margin-bottom: 40px; }
+    .c360-intro .c360-lead { margin-bottom: 0; }
+    .c360-intro-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+    @media (max-width: 900px) { .c360-intro { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -100,10 +104,13 @@
 
     <section class="section c360">
       <div class="container">
-        <div class="project-intro" data-reveal>
+        <div class="project-intro c360-intro" data-reveal>
+          <div class="c360-intro-text">
           <p class="eyebrow">Il progetto</p>
           <h2>Studio e lavoro, faccia a faccia</h2>
           <p class="c360-lead">Carriera 360° è il progetto di orientamento scolastico e professionale del Consiglio Giovanile Bellunese, nato per avvicinare gli studenti al mondo del lavoro e della formazione. Offre un’occasione concreta per conoscere professioni, percorsi di studio e opportunità presenti sul territorio, creando allo stesso tempo un punto di incontro tra giovani, scuole e imprese.</p>
+          </div>
+          <img class="c360-intro-photo" src="assets/img/carriera-incontro.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Un gruppo di studenti partecipa a un workshop di orientamento">
         </div>
         <div class="gallery" aria-label="Fotografie di Carriera 360°" role="group" data-reveal>
           <a href="assets/img/carriera-2026-c024.webp" data-lightbox><img src="assets/img/carriera-2026-c024.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Studenti e professionisti si incontrano presso uno stand di Carriera 360°"></a>
