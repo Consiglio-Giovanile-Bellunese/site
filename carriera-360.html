@@ -45,6 +45,7 @@
     .c360-edition h3 { margin-bottom: 6px; font-size: 1.3rem; }
     .c360-meta { font-weight: 700; color: var(--ink) !important; margin-bottom: 12px !important; }
     .c360-fact { display: inline-block; padding: 4px 14px; margin: 0 8px 14px 0; border-radius: 999px; background: var(--sky); color: var(--cerulean); font: 700 .82rem/1.5 var(--font-head); }
+    .c360-hero { background-image: linear-gradient(90deg, rgba(8, 40, 82, .96) 0%, rgba(8, 40, 82, .86) 40%, rgba(8, 40, 82, .35) 100%), url("assets/img/carriera-2023-11.webp"); background-size: cover; background-position: center 40%; } .c360-hero .hero-path { display: none; } .c360-intro .c360-lead { font-size: 1.2rem; line-height: 1.7; } .c360-intro-photo { aspect-ratio: 5 / 4; object-position: 62% 40%; } .c360-edition .c360-meta { font-weight: 600; color: var(--muted); }
     .c360-edition-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; } .c360-edition-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); } @media (max-width: 520px) { .c360-edition-photos { grid-template-columns: 1fr 1fr; } .c360-edition-photos img:first-child { grid-column: 1 / -1; } }
     .c360-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 16px 0 0; padding: 0; list-style: none; }
     .c360-links a { font: 700 .88rem/1.3 var(--font-head); color: var(--cerulean); text-decoration: underline; text-underline-offset: 3px; }
@@ -167,7 +168,7 @@
   </header>
 
   <main id="main">
-    <section class="page-hero">
+    <section class="page-hero c360-hero">
       <svg class="hero-path" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M-60 540C160 440 300 500 440 470S700 360 860 -60" fill="none" stroke="currentColor" stroke-width="70" stroke-linecap="round"/></svg>
       <div class="container">
         <nav class="breadcrumb" aria-label="Percorso"><ol><li><a href="index.html">Home</a></li><li><a href="eventi-progetti.html">Eventi e progetti</a></li><li aria-current="page">Carriera 360°</li></ol></nav>
