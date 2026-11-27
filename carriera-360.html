@@ -36,7 +36,8 @@
     .c360-card p, .c360-steps p, .c360-edition p { margin: 0; color: var(--muted); }
     .c360-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .c360-steps li { padding-top: 18px; border-top: 3px solid var(--steel); }
-    .c360-steps h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .c360-steps h3 { font-size: 1.1rem; margin-bottom: 10px; }    .c360-steps h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .c360-steps { counter-reset: step; } .c360-steps li { counter-increment: step; } .c360-steps li::before { content: counter(step, decimal-leading-zero); display: block; margin-bottom: 8px; font: 800 2.2rem/1 var(--font-head); color: var(--gold); } .c360-steps p { font-size: 1rem; }
     .c360-timeline { list-style: none; margin: 0; padding: 0; }
     .c360-edition { display: grid; grid-template-columns: 150px 1fr; gap: 8px 32px; padding: 30px 0; border-top: 1px solid var(--line); }
     .c360-edition:last-child { border-bottom: 1px solid var(--line); }
@@ -44,7 +45,7 @@
     .c360-edition h3 { margin-bottom: 6px; font-size: 1.3rem; }
     .c360-meta { font-weight: 700; color: var(--ink) !important; margin-bottom: 12px !important; }
     .c360-fact { display: inline-block; padding: 4px 14px; margin: 0 8px 14px 0; border-radius: 999px; background: var(--sky); color: var(--cerulean); font: 700 .82rem/1.5 var(--font-head); }
-    .c360-edition-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; } .c360-edition-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); } @media (max-width: 520px) { .c360-edition-photos { grid-template-columns: 1fr; } }
+    .c360-edition-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; } .c360-edition-photos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); } @media (max-width: 520px) { .c360-edition-photos { grid-template-columns: 1fr 1fr; } .c360-edition-photos img:first-child { grid-column: 1 / -1; } }
     .c360-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 16px 0 0; padding: 0; list-style: none; }
     .c360-links a { font: 700 .88rem/1.3 var(--font-head); color: var(--cerulean); text-decoration: underline; text-underline-offset: 3px; }
     .c360-all { margin: 32px 0 0; }
@@ -202,7 +203,7 @@
           <div class="c360-audience">
             <article class="c360-card" id="studenti">
               <h3>Per te che stai per diplomarti</h3>
-              <p>Fai un colloquio vero, sistema il curriculum e chiedi a chi lavora com’è davvero la sua giornata. E scopri cosa puoi fare dopo il diploma, ITS compresi.</p>
+              <p>Prova un colloquio, sistema il curriculum e chiedi a chi lavora com’è davvero la sua giornata. E scopri cosa puoi fare dopo il diploma, ITS compresi: i corsi tecnici post-diploma.</p>
             </article>
             <article class="c360-card" id="scuole">
               <h3>Per le scuole</h3>
@@ -220,7 +221,7 @@
           <h2>Cosa succede durante la giornata</h2>
           <ol class="c360-steps">
             <li><h3>Gira tra gli stand</h3><p>Aziende, enti e associazioni a due passi da te. Avvicinati e chiedi tutto quello che vuoi.</p></li>
-            <li><h3>Prova un colloquio</h3><p>Un colloquio di prova con chi assume davvero. Se va male non succede niente, ma impari tantissimo.</p></li>
+            <li><h3>Prova un colloquio</h3><p>Un colloquio vero, ma senza pressione, con chi assume davvero. Se va male non succede niente, ma impari tantissimo.</p></li>
             <li><h3>Impara facendo</h3><p>Workshop e laboratori per sporcarti le mani con attività pratiche.</p></li>
             <li><h3>Guarda oltre il diploma</h3><p>Gli ITS e gli enti di formazione ti raccontano cosa puoi studiare dopo la scuola.</p></li>
           </ol>
@@ -245,7 +246,7 @@
 
         <div class="c360-block editions" data-reveal>
           <p class="eyebrow">Le edizioni</p>
-          <h2>Un progetto che cresce edizione dopo edizione</h2>
+          <h2>Tre edizioni, sempre più grandi</h2>
           <ol class="c360-timeline">
             <li class="c360-edition">
               <div class="c360-year">2023</div>
