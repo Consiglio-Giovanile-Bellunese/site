@@ -96,12 +96,13 @@
     .c360-lead { max-width: none; }
     .c360-cta-text p { max-width: none; }
     .c360-stats { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 0; padding: 0; }
-    .c360-stats li { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 8px; padding: 28px; border-radius: var(--radius); background: var(--sky); }
+    .c360-stats li { display: flex; flex-direction: column; gap: 8px; padding: 28px; border-radius: var(--radius); background: var(--sky); }
     .c360-stats strong { font: 800 clamp(2.4rem, 1.8rem + 2.4vw, 3.6rem)/1 var(--font-head); color: var(--cerulean); }
     .c360-stats span { font: 600 1rem/1.3 var(--font-body); color: var(--ink); }
     .c360-stats-note { margin: 14px 0 0; font-size: .85rem; color: var(--muted); }
     @media (max-width: 700px) { .c360-stats { grid-template-columns: 1fr; } }
-      .c360-edition-photos a { display: block; }
+      .c360-facts { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+    .c360-facts li { font: 700 .92rem/1.35 var(--font-head); color: var(--cerulean); }
   </style>
   <script type="application/ld+json">
   {
@@ -282,6 +283,7 @@
             <li><strong>1.000+</strong><span>studenti coinvolti</span></li>
             <li><strong>50+</strong><span>realtà partecipanti</span></li>
           </ul>
+          <p class="c360-stats-note">Dati complessivi fino al 2026.</p>
         </div>
 
         <div class="c360-block editions" id="edizioni" data-reveal>
@@ -289,48 +291,36 @@
           <h2>Tre edizioni, sempre più grandi</h2>
           <ol class="c360-timeline">
             <li class="c360-edition">
-              <div class="c360-year">2023</div>
+              <div class="c360-side">
+                <div class="c360-year">2023</div>
+                <ul class="c360-facts"><li>300+ studenti</li></ul>
+              </div>
               <div>
                 <h3>Prima edizione: si parte</h3>
                 <p class="c360-meta">30 ottobre 2023 · ex Chiesa dei Gesuiti, Belluno</p>
-                <span class="c360-fact">300+ studenti</span>
                 <p>Tutto parte dalla ex Chiesa dei Gesuiti: per la prima volta scuole, aziende e associazioni del capoluogo si ritrovano nello stesso posto. Gli studenti girano tra gli stand, fanno domande a chi lavora davvero e si siedono per un colloquio individuale. Una giornata per scoprire che, dopo il diploma, le strade sono tante e che parlarne dal vivo è tutta un’altra cosa.</p>
-              
-                <div class="c360-edition-photos">
-                  <a href="carriera-360-foto.html#foto-2023"><img src="assets/img/carriera-2023-11.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="La sala con le colonne, piena di studenti"></a>
-                  <a href="carriera-360-foto.html#foto-2023"><img src="assets/img/carriera-2023-44.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Una relatrice parla a un gruppo di studenti seduti"></a>
-                  <a href="carriera-360-foto.html#foto-2023"><img src="assets/img/carriera-2023-40.webp" width="1067" height="1600" loading="lazy" decoding="async" alt="Studenti seguono un incontro di orientamento"></a>
-                </div>
               </div>
             </li>
             <li class="c360-edition">
-              <div class="c360-year">2024</div>
+              <div class="c360-side">
+                <div class="c360-year">2024</div>
+                <ul class="c360-facts"><li>600+ studenti</li><li>45+ stand</li></ul>
+              </div>
               <div>
                 <h3>Seconda edizione: si cresce</h3>
                 <p class="c360-meta">21 settembre 2024 · Longarone Fiere</p>
-                <span class="c360-fact">600+ studenti</span><span class="c360-fact">45+ stand</span>
                 <p>Si fa spazio: i ragazzi diventano tantissimi e l’evento si trasferisce a Longarone Fiere, con molti più stand. Tra un giro e l’altro ci sono colloqui, workshop e momenti di confronto con aziende e associazioni, ma anche tanto spazio per chiacchierare, curiosare e farsi un’idea concreta di cosa fanno davvero i professionisti.</p>
-              
-                <div class="c360-edition-photos">
-                  <a href="carriera-360-foto.html#foto-2024"><img src="assets/img/carriera-incontro.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Un gruppo di studenti partecipa a un workshop di orientamento"></a>
-                  <a href="carriera-360-foto.html#foto-2024"><img src="assets/img/carriera-orientamento.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Una studentessa dialoga con i referenti di un’associazione"></a>
-                  <a href="carriera-360-foto.html#foto-2024"><img src="assets/img/carriera-laboratorio.webp" width="1600" height="1067" loading="lazy" decoding="async" alt="Studenti seguono una dimostrazione con una videocamera"></a>
-                </div>
               </div>
             </li>
             <li class="c360-edition">
-              <div class="c360-year">2026</div>
+              <div class="c360-side">
+                <div class="c360-year">2026</div>
+                <ul class="c360-facts"><li>Con ITS e associazioni</li></ul>
+              </div>
               <div>
                 <h3>Terza edizione: si allarga</h3>
                 <p class="c360-meta">12 maggio 2026 · Longarone Fiere</p>
-                <span class="c360-fact">Con ITS e associazioni</span>
                 <p>Il giro si allarga: arrivano anche gli ITS e le associazioni, e il confronto diventa ancora più completo. Oltre ai colloqui e ai workshop, i ragazzi possono scoprire i percorsi tecnici post-diploma e capire quali strade esistono anche vicino a casa. Più voci, più idee, più possibilità di trovare quella giusta.</p>
-              
-                <div class="c360-edition-photos">
-                  <a href="carriera-360-foto.html#foto-2026"><img src="assets/img/carriera-2026-a059.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Uno studente parla con un professionista"></a>
-                  <a href="carriera-360-foto.html#foto-2026"><img src="assets/img/carriera-2026-a004.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Una studentessa si confronta con una professionista"></a>
-                  <a href="carriera-360-foto.html#foto-2026"><img src="assets/img/carriera-2026-c008.webp" width="1600" height="1066" loading="lazy" decoding="async" alt="Partecipanti seguono un workshop"></a>
-                </div>
               </div>
             </li>
           </ol>
