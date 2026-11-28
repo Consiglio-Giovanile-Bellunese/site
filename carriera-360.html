@@ -105,10 +105,12 @@
       .c360-facts { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
     .c360-facts li { font: 700 .92rem/1.35 var(--font-head); color: var(--cerulean); }
       .c360-edition p strong { color: var(--ink); }
-      .c360-logos { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 28px 56px; margin: 20px 0 0; padding: 0; }
-    .c360-logos img { display: block; height: 92px; width: auto; max-width: 100%; }
-    .c360-logos img[width="232"], .c360-logos img[width="259"] { height: 112px; }
-    .c360-logos-label { margin-top: 48px; }
+      .c360-logos { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; margin: 18px 0 0; padding: 0; }
+    .c360-logos img { display: block; height: 84px; width: auto; max-width: 100%; }
+    .c360-logos img[width="232"], .c360-logos img[width="259"] { height: 104px; }
+    .c360-sostegni { display: flex; flex-wrap: wrap; gap: 40px 72px; }
+    .c360-sg { display: flex; flex-direction: column; }
+    .c360-sg .c360-logos { flex: 1; }
     @media (max-width: 520px) { .c360-logos { gap: 22px 36px; } .c360-logos img { height: 64px; } .c360-logos img[width="232"], .c360-logos img[width="259"] { height: 80px; } }
   </style>
   <script type="application/ld+json">
@@ -343,18 +345,22 @@
 </ul>
 </div>
 
-<div class="c360-block" id="sostegni" data-reveal>
+<div class="c360-block c360-sostegni" id="sostegni" data-reveal>
+<div class="c360-sg">
 <p class="eyebrow">Con il patrocinio di</p>
 <ul class="c360-logos">
 <li><img src="assets/img/patrocinio-comune-longarone.webp" width="232" height="240" alt="Comune di Longarone" loading="lazy" decoding="async"></li>
 <li><img src="assets/img/patrocinio-provincia-belluno.webp" width="690" height="240" alt="Provincia di Belluno" loading="lazy" decoding="async"></li>
 <li><img src="assets/img/patrocinio-regione-veneto.webp" width="259" height="240" alt="Patrocinio Regione del Veneto" loading="lazy" decoding="async"></li>
 </ul>
-<p class="eyebrow c360-logos-label">Con il contributo di</p>
+</div>
+<div class="c360-sg">
+<p class="eyebrow">Con il contributo di</p>
 <ul class="c360-logos">
 <li><img src="assets/img/contributo-civibank.webp" width="660" height="240" alt="CiviBank, Gruppo Sparkasse" loading="lazy" decoding="async"></li>
 <li><img src="assets/img/contributo-comuni-piave.webp" width="508" height="240" alt="BIM, I Comuni del Piave" loading="lazy" decoding="async"></li>
 </ul>
+</div>
 </div>
 
 </div>
